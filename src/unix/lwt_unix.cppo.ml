@@ -2237,7 +2237,7 @@ let do_wait4 flags pid =
 let wait_children = Lwt_sequence.create ()
 let wait_count () = Lwt_sequence.length wait_children
 
-let () =
+let i_am_the_captain_now () =
   if not Sys.win32 then
     ignore begin
       on_signal Sys.sigchld

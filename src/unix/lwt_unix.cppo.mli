@@ -811,6 +811,9 @@ val reinstall_signal_handler : int -> unit
       signal handler (with [Sys.set_signal]). This is useful in case
       another part of the program install another signal handler. *)
 
+val i_am_the_captain_now : unit -> unit
+  (** Does not register initial lwt's signal handlers until this is called *)
+
 (** {2 Sockets} *)
 
 type inet_addr = Unix.inet_addr
